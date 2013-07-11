@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    
+    
+   	<LinearLayout
+   	    android:id="@+id/thumbnail2"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:layout_centerHorizontal="true"
+   	    android:layout_alignParentTop="true">
+
+   	    <com.google.ads.AdView
+   	        android:id="@+id/adView"
+   	        android:layout_width="wrap_content"
+   	        android:layout_height="wrap_content"
+   	        ads:adSize="BANNER"
+   	        ads:adUnitId="730ca80745964c44"
+   	        ads:loadAdOnCreate="true"
+   	        android:gravity="center_horizontal" >
+
+   	    </com.google.ads.AdView>
+   	</LinearLayout>
+       	
+   	<LinearLayout
+   	    android:id="@+id/thumbnail"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentLeft="true"
+   	    android:background="@drawable/image_bg"
+   	    android:layout_below="@id/thumbnail2"
+   	    android:padding="3dip" >
+   	    
+   	    <EditText
+   	        android:id="@+id/itemInput"
+   	        android:layout_width="fill_parent"
+   	        android:layout_height="wrap_content"
+   	        android:layout_marginLeft="4dp"
+   	        android:layout_marginTop="4dp"
+   	        android:layout_weight="3.02"
+   	        android:ems="10"
+   	        android:hint="Search..." />
+
+   	    <Button
+   	        android:id="@+id/button1"
+   	        android:layout_width="75dp"
+   	        android:layout_height="36dp"
+   	        android:layout_alignParentLeft="true"
+   	        android:layout_marginTop="3dp"
+   	        android:layout_marginLeft="4dp"
+   	        android:layout_weight="0.64"
+   	        android:background="@drawable/btncalcular"
+   	        android:text="Buscar" />
+
+   	</LinearLayout>
+   	
+   <ImageView
+       android:id="@+id/imageView1"
+       android:layout_width="120dp"
+       android:layout_height="120dp"
+       android:layout_below="@+id/thumbnail"
+       android:layout_marginLeft="6dp"
+       android:layout_marginTop="6dp"
+       android:layout_marginBottom="14dp"
+       android:layout_marginRight="22dp"/>
+
+   <TextView
+       android:id="@+id/itemTextSelect"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/thumbnail"
+       android:layout_toRightOf="@+id/imageView1"
+       android:layout_marginTop="12dp"
+       android:textColor="#525252"
+       android:textSize="20dip" />
+
+   <TextView
+       android:id="@+id/precioMediana"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/itemTextSelect"
+       android:layout_toRightOf="@+id/imageView1"
+       android:textColor="#525252"
+       android:textSize="18dip" />
+
+   <TextView
+       android:id="@+id/precioMedianaCalculado"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_toRightOf="@+id/imageView1"
+       android:layout_below="@+id/precioMediana"
+       android:textColor="#971515"
+       android:textSize="18dip" />
+	    
+       <ListView
+           android:id="@+id/list"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:layout_below="@+id/imageView1"
+           android:layout_weight="1" />
+
+
+</RelativeLayout>
